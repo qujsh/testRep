@@ -16,3 +16,5 @@ echo 'test2 four';
 
 echo 'test2 five';
 
+echo 'test2 six';
+
