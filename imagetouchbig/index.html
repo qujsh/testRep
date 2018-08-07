@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>图片缩放</title>
+    <link rel="stylesheet" href="scale.css" type="text/css" />
+</head>
+<body>
+<!--需要显示的图片-->
+<ul class="list">
+    <li><img src="https://ssltest.ngarihealth.com/hospital-file/image/20180608/20180608073548_44787.jpg" /></li>
+    <li><img src="https://ssltest.ngarihealth.com/hospital-file/image/20180608/20180608073548_44787.jpg" /></li>
+    <li><img src="https://ssltest.ngarihealth.com/hospital-file/image/20180608/20180608073548_44787.jpg" /></li>
+    <li><img src="https://ssltest.ngarihealth.com/hospital-file/image/20180608/20180608073548_44787.jpg" /></li>
+</ul>
+
+<!--图片zoom浮层-->
+<section class="imgzoom_pack">
+    <div class="imgzoom_x"></div>
+    <div class="imgzoom_img"><img src="" /></div>
+</section>
+<script src="scale.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event){
+        ImagesZoom.init({
+            "elem": ".list"
+        });
+    }, false);
+</script>
+</body>
+</html>
