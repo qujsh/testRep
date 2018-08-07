@@ -55,6 +55,17 @@
                 document.removeEventListener("touchmove", self.eventStop, false);
             }, false);
 
+            //点击浮层的 图片做关闭动作
+            zoomImg.addEventListener("click", function(){
+                zoomMask.style.cssText = "display:none";
+                zoomImg.src = "";
+                zoomImg.style.cssText = "";
+
+                self._destroy();
+
+                document.removeEventListener("touchmove", self.eventStop, false);
+            }, false);
+
             for(var len=imgList.length,i=0; i<len; i++){
                 imgList[i].addEventListener("click", function(){
                     imgSrc = this.getAttribute("src");
@@ -127,7 +138,8 @@
         _touchstart: function(e){
             var self = this;
 
-            e.preventDefault();
+            //这儿会将 图片的点击事件做禁止处理，
+            // e.preventDefault();
 
             var touchTarget = e.targetTouches.length; //获得触控点数
 
